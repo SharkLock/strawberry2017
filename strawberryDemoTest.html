@@ -514,6 +514,59 @@
         setTagClass($id("tab" + index), "htabup");
         
       }
+
+      var t, c = 0;
+      
+      function timedFlush() {
+        
+         var global = com.xjwgraph.Global,
+         modeMap = global.modeMap,
+         modeKeys = modeMap.getKeys(),
+         modeKeysLength = modeKeys.length,
+         modeTool = global.modeTool,
+         //百度首页图片，如果动态图可以使用其它gif.
+         imgSrc = "https://ss0.bdstatic.com/5aV1bjqh_Q23odCf/static/superman/img/logo/bd_logo1_31bdc765.png";
+         
+         for (var i = modeKeysLength; i--;) {
+        
+            var modeId = modeKeys[i];
+            mode = $id(modeId),//获取dom模型
+            
+            modeStyle = mode.style,
+            index = modeTool.getModeIndex(mode),
+            
+            title = $id("title" + index), //标题元素
+            img = $id("backImg" + index);//背景图片元素
+            
+            var module = $id("module" + index);
+						var moduleStyle = module.style;
+            moduleStyle.top = c + "0px";
+            moduleStyle.left = c + "0px";
+            
+            var modeObj = modeMap.get(modeId),//获取模型对象主要获取自定义属性         
+            modeProp = modeObj['prop'];//获取模型扩展属性，自定义属性类型和默认值在Entity.js baseMode.self.prop定义。
+            for (var attrKey in modeProp) {
+               
+               var key = attrKey;
+               var value = modeProp[attrKey];
+               /*
+               * 据key 或 value 的定义取后台获取数据改变title或img的显示或自身业务逻辑判断，处理逻辑。
+               * 此处实例默认加1并设置成红色并斜体，将背景改成百度logo.
+               *  
+               */
+               if (true) {
+                  title.innerHTML =  "<font color='red'><i>Auto Set" + c + "</i></font>",//这里可以设置标题显示文字,因为是html嵌入，可以根据业务逻辑设置颜色、加粗、字体。
+                  img.src = imgSrc;//将图片改成百度的图片
+               }
+            
+            }
+     
+         }
+         
+         c++; 
+         t = setTimeout("timedFlush()", 3000);
+      
+      }
       
       jQuery(document).ready(function () {
         
@@ -574,6 +627,8 @@
         
         document.onclick = countModule;
         document.onkeydown = KeyDown;
+
+        //timedFlush();
         
       });
     

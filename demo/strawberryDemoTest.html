@@ -1,7 +1,6 @@
-﻿<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">  
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html xmlns:v>
 <head>
-  
   <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
   <title>xjwGraphDemo</title>
   
@@ -47,7 +46,7 @@
     <div class="easyui-accordion overflowHidden" fit="true" border="false">
       
         <div title="基本图形" style="overflow:hidden;background-color:#c7dbfc;">
-          
+          <!-- baseLine -->
           <div id="baseLine2" style="position:absolute;left:10px;top:30px !important;top:10px">
             <div class="title">&nbsp;</div>
             <img id="backGroundImg" src="images/line3.png" class="nodeStyle"/>
@@ -62,91 +61,92 @@
             <div class="title">&nbsp;</div>
             <img id="backGroundImg" src="images/line1.png" class="nodeStyle"/>
           </div>
-      
-          <div id="baseMode4" divType="mode" style="position:absolute;left:10px;top:70px !important;top:50px">
-            <div class="title">&nbsp;</div>
-            <img id="backGroundImg" src="images/baseMode2.png" class="nodeStyle"/>
-          </div>
-      
-          <div id="baseMode5" divType="mode" style="position:absolute;left:50px;top:70px !important;top:50px">
-            <div class="title">&nbsp;</div>
-            <img id="backGroundImg" src="images/baseMode3.png" class="nodeStyle"/>
-          </div>
-      
-          <div id="baseMode6" divType="mode" style="position:absolute;left:90px;top:70px !important;top:50px">
-            <div class="title">&nbsp;</div>
-            <img id="backGroundImg" src="images/baseMode4.png" class="nodeStyle"/>
-          </div>
-          
-          <div id="baseMode3" divType="mode" style="position:absolute;left:50px;top:106px !important;top:86px">
-            <div class="title">&nbsp;</div>
-            <img id="backGroundImg" src="images/baseMode1.png" class="nodeStyle"/>
-          </div>
-      
-          <div id="baseMode7" divType="mode" style="position:absolute;left:10px;top:106px !important;top:86px">
-            <div class="title">&nbsp;</div>
-            <img id="backGroundImg" src="images/baseMode5.png" class="nodeStyle"/>
-          </div>
-      
-          <div id="baseMode8" divType="mode" style="position:absolute;left:90px;top:106px !important;top:86px">
-            <div class="title">&nbsp;</div>
-            <img id="backGroundImg" src="images/baseMode6.png" class="nodeStyle"/>
-          </div>
-      
-          <div id="baseMode9" divType="mode" style="position:absolute;left:10px;top:140px !important;top:120px">
-            <div class="title">&nbsp;</div>
-            <img id="backGroundImg" src="images/baseMode7.png" class="nodeStyle"/>
-          </div>
-      
-          <div id="baseMode10" divType="mode" style="position:absolute;left:50px;top:140px !important;top:120px">
-            <div class="title">&nbsp;</div>
-            <img id="backGroundImg" src="images/baseMode8.png" class="nodeStyle"/>
-          </div>
-      
-          <div id="baseMode11" divType="mode" style="position:absolute;left:90px;top:140px !important;top:120px">
-            <div class="title">&nbsp;</div>
-            <img id="backGroundImg" src="images/baseMode9.png" class="nodeStyle"/>
-          </div>
-      
-          <div id="baseMode12" divType="mode" style="position:absolute;left:10px;top:175px !important;top:155px">
-            <div class="title">&nbsp;</div>
-            <img id="backGroundImg" src="images/baseMode10.png" class="nodeStyle"/>
-          </div>
-      
-          <div id="baseMode13" divType="mode" style="position:absolute;left:50px;top:175px !important;top:155px">
-            <div class="title">&nbsp;</div>
-            <img id="backGroundImg" src="images/baseMode11.png" class="nodeStyle"/>
-          </div>
-      
-          <div id="baseMode14" divType="mode" style="position:absolute;left:90px;top:175px !important;top:155px">
-            <div class="title">&nbsp;</div>
-            <img id="backGroundImg" src="images/baseMode12.png" class="nodeStyle"/>
-          </div>
-      
-          <div id="baseMode15" divType="mode" style="position:absolute;left:10px;top:210px !important;top:190px">
-            <div class="title">&nbsp;</div>
-            <img id="backGroundImg" src="images/baseMode13.png" class="nodeStyle"/>
-          </div>
-      
-          <div id="baseMode16" divType="mode" style="position:absolute;left:90px;top:210px !important;top:190px">
-            <div class="title">&nbsp;</div>
-            <img id="backGroundImg" src="images/baseMode14.png" class="nodeStyle"/>
-          </div>
-      
-          <div id="baseMode17" divType="mode" style="position:absolute;left:50px;top:210px !important;top:190px">
-            <div class="title">&nbsp;</div>
-            <img id="backGroundImg" src="images/baseMode15.png" class="nodeStyle"/>
-          </div>
-        
-        <!-- 新增text图元与按钮图元 -->
-          <div id="textMode" style="position:absolute;left:10px;top:245px !important;top:225px">
+
+          <!-- mode: text and button -->
+          <div id="textMode" style="position:absolute;left:10px;top:70px !important;top:50px">
             <div class="title">&nbsp;</div>
             <img id="backGroundImg" src="images/textMode1.png" class="nodeStyle"/>
           </div>
 
-          <div id="buttonMode" style="position:absolute;left:50px;top:245px !important;top:225px">
+          <div id="buttonMode" style="position:absolute;left:50px;top:70px !important;top:50px">
             <div class="title">&nbsp;</div>
             <img id="backGroundImg" src="images/buttonMode.png" class="nodeStyle"/>
+          </div>
+
+          <!-- mode: others -->
+          <div id="baseMode4" divType="mode" style="position:absolute;left:50px;top:106px !important;top:86px">
+            <div class="title">&nbsp;</div>
+            <img id="backGroundImg" src="images/baseMode2.png" class="nodeStyle"/>
+          </div>
+      
+          <div id="baseMode5" divType="mode" style="position:absolute;left:10px;top:106px !important;top:86px">
+            <div class="title">&nbsp;</div>
+            <img id="backGroundImg" src="images/baseMode3.png" class="nodeStyle"/>
+          </div>
+      
+          <div id="baseMode6" divType="mode" style="position:absolute;left:90px;top:106px !important;top:86px">
+            <div class="title">&nbsp;</div>
+            <img id="backGroundImg" src="images/baseMode4.png" class="nodeStyle"/>
+          </div>
+          
+          <div id="baseMode3" divType="mode" style="position:absolute;left:10px;top:140px !important;top:120px">
+            <div class="title">&nbsp;</div>
+            <img id="backGroundImg" src="images/baseMode1.png" class="nodeStyle"/>
+          </div>
+      
+          <div id="baseMode7" divType="mode" style="position:absolute;left:50px;top:140px !important;top:120px">
+            <div class="title">&nbsp;</div>
+            <img id="backGroundImg" src="images/baseMode5.png" class="nodeStyle"/>
+          </div>
+      
+          <div id="baseMode8" divType="mode" style="position:absolute;left:90px;top:140px !important;top:120px">
+            <div class="title">&nbsp;</div>
+            <img id="backGroundImg" src="images/baseMode6.png" class="nodeStyle"/>
+          </div>
+      <!--  -->
+          <div id="baseMode9" divType="mode" style="position:absolute;left:10px;top:175px !important;top:155px">
+            <div class="title">&nbsp;</div>
+            <img id="backGroundImg" src="images/baseMode7.png" class="nodeStyle"/>
+          </div>
+      
+          <div id="baseMode10" divType="mode" style="position:absolute;left:50px;top:175px !important;top:155px">
+            <div class="title">&nbsp;</div>
+            <img id="backGroundImg" src="images/baseMode8.png" class="nodeStyle"/>
+          </div>
+      
+          <div id="baseMode11" divType="mode" style="position:absolute;left:90px;top:175px !important;top:155px">
+            <div class="title">&nbsp;</div>
+            <img id="backGroundImg" src="images/baseMode9.png" class="nodeStyle"/>
+          </div>
+      
+          <div id="baseMode12" divType="mode" style="position:absolute;left:10px;top:210px !important;top:190px">
+            <div class="title">&nbsp;</div>
+            <img id="backGroundImg" src="images/baseMode10.png" class="nodeStyle"/>
+          </div>
+      
+          <div id="baseMode13" divType="mode" style="position:absolute;left:90px;top:210px !important;top:190px">
+            <div class="title">&nbsp;</div>
+            <img id="backGroundImg" src="images/baseMode11.png" class="nodeStyle"/>
+          </div>
+      
+          <div id="baseMode14" divType="mode" style="position:absolute;left:50px;top:210px !important;top:190px">
+            <div class="title">&nbsp;</div>
+            <img id="backGroundImg" src="images/baseMode12.png" class="nodeStyle"/>
+          </div>
+      
+          <div id="baseMode15" divType="mode" style="position:absolute;left:10px;top:245px !important;top:225px">
+            <div class="title">&nbsp;</div>
+            <img id="backGroundImg" src="images/baseMode13.png" class="nodeStyle"/>
+          </div>
+      
+          <div id="baseMode16" divType="mode" style="position:absolute;left:50px;top:245px !important;top:225px">
+            <div class="title">&nbsp;</div>
+            <img id="backGroundImg" src="images/baseMode14.png" class="nodeStyle"/>
+          </div>
+      
+          <div id="baseMode17" divType="mode" style="position:absolute;left:90px;top:245px !important;top:225px">
+            <div class="title">&nbsp;</div>
+            <img id="backGroundImg" src="images/baseMode15.png" class="nodeStyle"/>
           </div>
 
 
@@ -537,6 +537,11 @@
             
             title = $id("title" + index), //标题元素
             img = $id("backImg" + index);//背景图片元素
+            
+            var module = $id("module" + index);
+            var moduleStyle = module.style;
+            moduleStyle.top = c + "0px";
+            moduleStyle.left = c + "0px";
             
             var modeObj = modeMap.get(modeId),//获取模型对象主要获取自定义属性         
             modeProp = modeObj['prop'];//获取模型扩展属性，自定义属性类型和默认值在Entity.js baseMode.self.prop定义。

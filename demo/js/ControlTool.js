@@ -69,7 +69,7 @@ ControlTool.prototype = {
 	
 		var global = com.xjwgraph.Global,
 		tempControlTool = global.controlTool;
-// @待改动
+
 		if (!$id("module" + tempControlTool.indexId)) {
 			return;
 		}

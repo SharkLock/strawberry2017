@@ -246,7 +246,6 @@ ModeTool.prototype = {
 		var buttonNode = doc.createTextNode("按钮");
 
 		if(isText) {
-			debugger
 			// 设置样式
 			self.setClass(titleDiv, "text-title");
 			self.setClass(contentDiv, "content");
@@ -257,7 +256,6 @@ ModeTool.prototype = {
 			contentDiv.appendChild(titleDiv);
 			contentDiv.appendChild(backImg);
 			moduleDiv.appendChild(contentDiv);
-			backImg.filter = "Alpha(opacity=0)";
 			
 		} else if(isButton) {
 			

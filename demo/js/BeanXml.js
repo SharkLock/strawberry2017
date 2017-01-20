@@ -175,14 +175,15 @@ LineXML.prototype = {
 
 }
 
-var ModeXML = com.xjwgraph.ModeXML = function (modeIndex, isText, isButton) {
+var ModeXML = com.xjwgraph.ModeXML = function (modeIndex, modeTypeValue) {
 	
 	var self = this,
 	tempModeTool = com.xjwgraph.Global.modeTool;
 	
-	self.modeDiv = tempModeTool.createBaseMode(0, 0, "", modeIndex, "50px", "50px", isText, isButton);
+	self.modeDiv = tempModeTool.createBaseMode(0, 0, "", modeIndex, "50px", "50px", modeTypeValue == 1, modeTypeValue == 2);
 	self.backImg = tempModeTool.getSonNode(self.modeDiv, "backImg");
 	self.title = tempModeTool.getSonNode(self.modeDiv, "title");
+	self.modeTypeValue = modeTypeValue;
 	
 }
 
@@ -247,6 +248,7 @@ ModeXML.prototype = {
 			mode.prop = this['prop'];
 		}
 		
+		mode.modeType = this.modeTypeValue;
 		global.modeMap.put(mode.id, mode);
 		
 		tempModeTool.initEvent(modeIndex);
@@ -801,18 +803,10 @@ BeanXML.prototype = {
 				
 				if (nodeName == "mode") {
 					
-					var isText, isButton;
-					var modeTypeValue = self._getAttrValue(attributes, 'modeType');
-					
-       	  if ("2" == modeTypeValue) {
-       	  	isButton = true;
-       	  } else if ("1" == modeTypeValue) {
-       	    isText = true;
-       	  }	
-       	  
+					var modeTypeValue = self._getAttrValue(attributes, 'modeType');  
        	  var idIndex = self._getAttrValue(attributes, 'id');
 					
-					xml = new ModeXML(idIndex, isText, isButton);
+					xml = new ModeXML(idIndex, modeTypeValue);
 			
 				} else if (nodeName == "line") {
 					xml = new LineXML();

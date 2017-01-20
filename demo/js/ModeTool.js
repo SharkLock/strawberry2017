@@ -235,7 +235,8 @@ ModeTool.prototype = {
 		contentDiv = doc.createElement("div"),
 		backImg = doc.createElement("img");
 	
-
+		backImg.style.height = backHeight;
+		backImg.src = imgSrc;
 	
 		var moduleDivStyle = moduleDiv.style;
 		moduleDivStyle.top = top + "px";
@@ -256,7 +257,8 @@ ModeTool.prototype = {
 			contentDiv.appendChild(titleDiv);
 			contentDiv.appendChild(backImg);
 			moduleDiv.appendChild(contentDiv);
-			
+			// 图片透明度设置为0: IE 写法
+			backImg.style.filter = "alpha(opacity:0)";
 		} else if(isButton) {
 			
 			self.setClass(titleDiv, "button-title");
@@ -281,9 +283,6 @@ ModeTool.prototype = {
 			contentDiv.appendChild(backImg);
 			
 		}
-
-		backImg.style.height = backHeight;
-		backImg.src = imgSrc;
 
 		moduleDiv.id = "module" + modeIndex;
 		titleDiv.id = "title" + modeIndex;

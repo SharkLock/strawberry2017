@@ -11,6 +11,9 @@
   display: table;
 }
 
+/*新增 2017.01.16*/
+
+/*title*/
 /*新增 2017.01.19*/
 .text-title {
   /*ie兼容性问题*/
@@ -18,9 +21,13 @@
   height: 50%;
   line-height: 0;
   top: 50%; 
+
   /*ie7*/
   *height: 60%;
   *top: 40%; 
+  /* ie 8/9*/
+  height: 60%\0;
+  top: 40%\0; 
 
   position:absolute; /*top:50%; height:0px; line-height: 100%; */
   font-size:12px;
@@ -40,6 +47,10 @@
   *height: 60%;
   *top: 40%; 
 
+  /* ie 8/9*/
+  height: 60%\0;
+  top: 40%\0; 
+
   position:absolute; /* top:50%; height:0px;  */
   font-size:12px;
   width:100%;
@@ -56,31 +67,18 @@
 
 /*img*/
 
-.text-title+img {
+.text-title + img {
   vertical-align:middle;
+  opacity: 0;
+  /*ie*/
+  filter: alpha(opacity:0);
   z-index: 1;
-  /*透明度兼容性问题*/
-
-  /* older safari/Chrome browsers */  
-  -webkit-opacity: 0;  
-  /* Netscape and Older than Firefox 0.9 */  
-  -moz-opacity: 0;  
-  /* Safari 1.x (pre WebKit!) 老式khtml内核的Safari浏览器*/  
-  -khtml-opacity: 0;  
-  /* IE9 + etc...modern browsers */  
-  opacity: 0;  
-  /* 只支持IE6、7、8、9 */
-  filter:Alpha(opacity=0);  
-  /*This works in IE 8 & 9 too*/  
-  -ms-filter:"progid:DXImageTransform.Microsoft.Alpha(Opacity=0)";  
-  /*IE4-IE9*/  
-  filter:progid:DXImageTransform.Microsoft.Alpha(Opacity=0);
-
-  /* 激活IE6、7的haslayout属性，让它读懂Alpha */
-  *zoom:1 
 }
 
 .content img {vertical-align:middle;z-index:1;}
+
+
+
 
 /*缩放控制点*/
 .top_left{font-size:0px; width:5px !important;height:5px !important;width:7px; height:7px; border:1px solid #000; background-color:#00F; position:absolute; z-index:1;background-color:#0F0; cursor:nw-resize; z-index:1;}
